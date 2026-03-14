@@ -44,7 +44,12 @@
 pre-commit:
   parallel: true
   jobs:
-    - name: lint staged files
+    # 1. Проверка TypeScript
+    - name: type-check
+      run: npm run type-check
+
+    # 2. ESLint и Oxfmt для staged файлов
+    - name: lint-staged
       run: npx lint-staged
 
 commit-msg:
