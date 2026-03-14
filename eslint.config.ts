@@ -24,6 +24,7 @@ export default defineConfigWithVueTs(
 
   ...pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
+  ...storybook.configs['flat/recommended'],
 
   {
     ...pluginPlaywright.configs['flat/recommended'],
