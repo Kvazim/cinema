@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import UiButton from '@/shared/ui/Uibutton/UiButton.vue';
+</script>
 
 <template>
-  <h1>You did it!</h1>
+  <UiButton >
+    Смотреть бесплатно
+  </UiButton>
 </template>
 
 <style scoped></style>
