@@ -1,11 +1,19 @@
 <script setup lang="ts">
-import UiButton from '@/shared/ui/Uibutton/UiButton.vue';
+import TokenProvider from './shared/hock/TokenProvider.vue';
+import { TEME_CONFIG } from './shared/lib/theme';
+import UiHeader from './shared/ui/Uiheader/UiHeader.vue';
 </script>
 
 <template>
-  <UiButton >
-    Смотреть бесплатно
-  </UiButton>
+  <TokenProvider :theme-config="TEME_CONFIG">
+    <a-layout class="layout">
+      <UiHeader />
+    </a-layout>
+  </TokenProvider>
 </template>
 
-<style scoped></style>
+<style scoped>
+.layout {
+  min-height: 100vh;
+}
+</style>

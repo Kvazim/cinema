@@ -9,13 +9,12 @@ pre-commit:
   commands:
     lint:
       glob: "*.{ts,tsx,js,jsx,vue}"
-      run: npx eslint {staged} --fix && npx oxfmt {staged}
+      run: npx eslint {staged_files} --fix && npx oxfmt {staged_files}
       stage_fixed: true
-  jobs:
-    - name: type-check
+    type-check:
       run: npm run type-check
 
 commit-msg:
-  jobs:
-    - name: commitlint
+  commands:
+    commitlint:
       run: npx commitlint --edit {1}
