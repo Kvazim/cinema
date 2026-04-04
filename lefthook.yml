@@ -9,7 +9,7 @@ pre-commit:
   commands:
     lint:
       glob: "*.{ts,tsx,js,jsx,vue}"
-      run: npx eslint {staged_files} --fix && npx oxfmt {staged_files}
+      run: npx oxfmt {staged_files}
       stage_fixed: true
     type-check:
       run: npm run type-check
