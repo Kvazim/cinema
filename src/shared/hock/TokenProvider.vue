@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import type { ThemeConfig } from 'ant-design-vue/es/config-provider/context'
+import type { ThemeConfig } from 'ant-design-vue/es/config-provider/context';
 defineProps<{
-  themeConfig: ThemeConfig
-}>()
-
+  themeConfig: ThemeConfig;
+}>();
 </script>
 
 <template>

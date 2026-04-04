@@ -26,7 +26,7 @@ const props = withDefaults(
      */
     backgroundColor?: string;
   }>(),
-  { primary: false }
+  { primary: false },
 );
 
 const emit = defineEmits<{
