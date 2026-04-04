@@ -8,8 +8,8 @@ pre-commit:
   parallel: true
   commands:
     lint:
-      glob: "*.{ts,tsx,js,jsx,vue}"
-      run: npx oxfmt {staged_files}
+      glob: '*.{ts,tsx,js,jsx,vue}'
+      run: npm run format:staged -- {staged_files}
       stage_fixed: true
     type-check:
       run: npm run type-check
