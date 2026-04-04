@@ -1,11 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TokenProvider from './shared/hock/TokenProvider.vue';
+import { TEME_CONFIG } from './shared/lib/theme';
+import UiHeader from './shared/ui/Uiheader/UiHeader.vue';
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <TokenProvider :theme-config="TEME_CONFIG">
+    <a-layout class="layout">
+      <UiHeader />
+    </a-layout>
+  </TokenProvider>
 </template>
 
-<style scoped></style>
+<style scoped>
+.layout {
+  min-height: 100vh;
+}
+</style>

@@ -1,0 +1,20 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+#
+
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      glob: '*.{ts,tsx,js,jsx,vue}'
+      run: npm run format:staged -- {staged_files}
+      stage_fixed: true
+    type-check:
+      run: npm run type-check
+
+commit-msg:
+  commands:
+    commitlint:
+      run: npm run commitlint -- --edit {1}
